@@ -1,13 +1,25 @@
 package com.cognizant;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+/**
+ * 
+ * @author POD5
+ * Test class for AuditManagementAuthenticationApplication
+ *
+ */
 @SpringBootTest
 class AuditManagementAuthenticationApplicationTests {
 
+	@Mock
+	AuditManagementAuthenticationApplication application;
+
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
+		assertNotNull(application);
 	}
 
 }
